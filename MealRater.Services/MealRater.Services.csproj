@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MealService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MealRater.Data\MealRater.Data.csproj">
+      <Project>{CCB174CC-2CDE-420D-A740-80C2C3686DB0}</Project>
+      <Name>MealRater.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MealRater.Models\MealRater.Models.csproj">
+      <Project>{BA98D4B2-DAF3-4D00-85BD-C030450F1D04}</Project>
+      <Name>MealRater.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

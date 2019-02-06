@@ -55,6 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201902061616130_InitialCreate.cs" />
+    <Compile Include="Migrations\201902061616130_InitialCreate.Designer.cs">
+      <DependentUpon>201902061616130_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902062147447_DBUpdate.cs" />
+    <Compile Include="Migrations\201902062147447_DBUpdate.Designer.cs">
+      <DependentUpon>201902062147447_DBUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Meal.cs" />
     <Compile Include="MealVote.cs" />
@@ -62,6 +71,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201902061616130_InitialCreate.resx">
+      <DependentUpon>201902061616130_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902062147447_DBUpdate.resx">
+      <DependentUpon>201902062147447_DBUpdate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

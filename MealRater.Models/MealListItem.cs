@@ -5,17 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MealRater.Data
+namespace MealRater.Models
 {
-    public class Meal
+    public class MealListItem
     {
-        [Key]
-        public int MealId { get; set; }
-        [Required]
+        public int MealID { get; set; }
         public string MealName { get; set; }
-        [Required]
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
         public string MealDescription { get; set; }
 
-        public DateTimeOffset CreatedUtc { get; set; }
+        public override string ToString() => MealName;
     }
 }

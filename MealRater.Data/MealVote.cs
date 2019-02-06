@@ -21,7 +21,7 @@ namespace MealRater.Data
         public Guid ApplicationUserId { get; set; }
         public virtual ApplicationUser Voter { get; set; }
 
-        [Required, Range(1,10)]
+        [Required, Range(1,3)]
         public int MealScore { get; set; }
     }
 }
