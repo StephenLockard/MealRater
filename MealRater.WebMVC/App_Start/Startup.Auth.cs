@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MealRater.WebMVC.Models;
+using MealRater.Data;
 
 namespace MealRater.WebMVC
 {
