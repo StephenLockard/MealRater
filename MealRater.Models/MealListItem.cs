@@ -11,7 +11,7 @@ namespace MealRater.Models
     {
         public int MealID { get; set; }
         public string MealName { get; set; }
-        [Display(Name = "Created")]
+        [Display(Name = "Created"), DisplayFormat(DataFormatString = "{0:d}")]
         public DateTimeOffset CreatedUtc { get; set; }
         public string MealDescription { get; set; }
 
