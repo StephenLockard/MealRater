@@ -69,5 +69,36 @@ namespace MealRater.Services
             }
 
         }
+
+        public bool UpdateMeal(MealEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Meals
+                        .Single(e => e.MealId == model.MealId);
+
+                entity.MealName = model.MealName;
+                entity.MealDescription = model.MealDescription;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteMeal(int noteId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Meals
+                        .Single(e => e.MealId == noteId);
+
+                ctx.Meals.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
