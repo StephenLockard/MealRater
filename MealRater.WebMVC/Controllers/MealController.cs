@@ -116,5 +116,7 @@ namespace MealRater.WebMVC.Controllers.MealVoteControllers
 
             return RedirectToAction("Index");
         }
+
+
     }
 }

@@ -59,6 +59,7 @@
     <Compile Include="MealEdit.cs" />
     <Compile Include="MealListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VoteCreate.cs" />
     <Compile Include="VoteListItem.cs" />
   </ItemGroup>
   <ItemGroup>

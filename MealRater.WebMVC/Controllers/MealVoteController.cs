@@ -17,6 +17,12 @@ namespace MealRater.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         
+
     }
 }
