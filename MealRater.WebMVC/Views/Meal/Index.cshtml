@@ -28,7 +28,7 @@
             @Html.DisplayNameFor(model => model.MealName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
+            @Html.DisplayNameFor(model => model.MealDescription)
         </th>
         <th></th>
     </tr>
@@ -43,7 +43,7 @@
                 @Html.DisplayFor(modelItem => item.MealName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
+                @Html.DisplayFor(modelItem => item.MealDescription)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.MealID }) |
