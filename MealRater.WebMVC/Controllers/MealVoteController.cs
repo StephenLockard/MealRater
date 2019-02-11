@@ -1,4 +1,5 @@
 ﻿using MealRater.Models;
+using MealRater.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace MealRater.WebMVC.Controllers
 
         public ActionResult Create()
         {
+            var service = new MealService();
+            ViewBag.MealId = new SelectList(service.GetMeals(), "MealID", "MealName");
             return View();
         }
 

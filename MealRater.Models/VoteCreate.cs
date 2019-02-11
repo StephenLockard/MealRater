@@ -10,7 +10,10 @@ namespace MealRater.Models
     public class VoteCreate
     {   
         [Required]
-        public MealListItem MealName { get; set; }
-        
+        public int MealId { get; set; }
+
+        [Required, Range(1, 10)]
+        public int MealScore { get; set; }
+       
     }
 }
