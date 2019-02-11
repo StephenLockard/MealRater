@@ -12,14 +12,5 @@ namespace MealRater.Models
         [Required]
         public MealListItem MealName { get; set; }
         
-
-        //[Required]
-        //[MinLength(2, ErrorMessage = "That name is too short!")]
-        //public string MealName { get; set; }
-        //[Required]
-        //[MinLength(2, ErrorMessage = "That description is too short!")]
-        //public string MealDescription { get; set; }
-
-        //public override string ToString() => MealName + MealDescription;
     }
 }
