@@ -19,7 +19,6 @@ namespace MealRater.Services
                     MealName = model.MealName,
                     MealDescription = model.MealDescription,
                     CreatedUtc = DateTimeOffset.Now,
-
                 };
 
             using (var ctx = new ApplicationDbContext())

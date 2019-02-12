@@ -15,6 +15,7 @@ namespace MealRater.Models
         [Display(Name = "Vote Date"), DisplayFormat(DataFormatString = "{0:d}")]
         public DateTimeOffset CreatedUtc { get; set; }
         public string UserName { get; set; }
+        public int MealScore { get; set; }
 
         public override string ToString()
         {

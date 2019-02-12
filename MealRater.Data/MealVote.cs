@@ -23,5 +23,6 @@ namespace MealRater.Data
 
         [Required, Range(1,10)]
         public int MealScore { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
     }
 }
