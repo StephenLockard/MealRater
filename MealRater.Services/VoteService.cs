@@ -82,5 +82,36 @@ namespace MealRater.Services
                     };
             }
         }
+
+        public bool UpdateVote(VoteEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealVotes
+                        .Single(e => e.VoteId == model.VoteId);
+
+                entity.MealId = model.MealId;
+                entity.MealScore = model.MealScore;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteNote(int voteId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealVotes
+                        .Single(e => e.VoteId == voteId && e.ApplicationUserId == _userId);
+
+                ctx.MealVotes.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace MealRater.Models
 {
-    class VoteEdit
+    public class VoteEdit
     {
+        public int VoteId { get; set; }
         public int MealId { get; set; }
+        public int MealName { get; set; }
         public int MealScore { get; set; }
     }
 }
