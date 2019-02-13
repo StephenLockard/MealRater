@@ -25,13 +25,13 @@ namespace MealRater.Services
         {
             var vote =
                 new MealVote()
-                { 
+                {
                     MealId = model.MealId,
                     MealScore = model.MealScore,
                     CreatedUtc = DateTimeOffset.Now,
                     ApplicationUserId = _userId,
                 };
-            
+
             using (var ctx = new ApplicationDbContext())
             {
                 //var meal = ctx.Meals.SingleOrDefault(m => m.MealId == model.MealId);
@@ -58,6 +58,28 @@ namespace MealRater.Services
                                 VoteID = e.VoteId
                             });
                 return interrogation.ToArray();
+            }
+        }
+
+        public VoteDetail GetVoteById(int voteId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MealVotes
+                        .Single(e => e.VoteId == voteId);
+                return
+                    new VoteDetail
+                    {
+                        VoteId = entity.VoteId,
+                        MealId = entity.MealId,
+                        MealName = entity.Meal.MealName,
+                        MealDescription = entity.Meal.MealDescription,
+                        MealScore = entity.MealScore,
+                        CreatedUtc = entity.CreatedUtc
+
+                    };
             }
         }
     }

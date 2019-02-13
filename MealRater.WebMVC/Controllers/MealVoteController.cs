@@ -51,35 +51,12 @@ namespace MealRater.WebMVC.Controllers
             return service;
         }
 
-        /*
-        private MealService CreateMealService()
+        public ActionResult Details(int id)
         {
-            var service = new MealService();
-            return service;
-        }
-        */
+            var svc = CreateVoteService();
+            var model = svc.GetVoteById(id);
 
-        /*
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(MealCreate model)
-        {
-            if(!ModelState.IsValid) return View(model);
-
-            var service = CreateMealService();
-
-            if (service.CreateMeal(model))
-            {
-               TempData["SaveResult"] = "Your meal was created.";
-                return RedirectToAction("Index");
-            };
-            ModelState.AddModelError("", "Error when attempting to create meal.");
             return View(model);
         }
-        */
-
-
-
     }
 }
- 

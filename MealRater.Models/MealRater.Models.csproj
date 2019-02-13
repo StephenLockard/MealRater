@@ -60,6 +60,8 @@
     <Compile Include="MealListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VoteCreate.cs" />
+    <Compile Include="VoteDetail.cs" />
+    <Compile Include="VoteEdit.cs" />
     <Compile Include="VoteListItem.cs" />
   </ItemGroup>
   <ItemGroup>

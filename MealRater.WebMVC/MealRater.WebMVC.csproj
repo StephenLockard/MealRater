@@ -287,6 +287,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\MealVote\Index.cshtml" />
     <Content Include="Views\MealVote\Create.cshtml" />
+    <Content Include="Views\MealVote\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
