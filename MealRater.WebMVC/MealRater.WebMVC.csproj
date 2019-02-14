@@ -177,6 +177,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MealController.cs" />
     <Compile Include="Controllers\MealVoteController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -290,9 +292,11 @@
     <Content Include="Views\MealVote\Details.cshtml" />
     <Content Include="Views\MealVote\Edit.cshtml" />
     <Content Include="Views\MealVote\Delete.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

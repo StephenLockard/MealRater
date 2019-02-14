@@ -40,13 +40,19 @@ namespace MealRater.Services
             }
         }
 
-        public IEnumerable<VoteListItem> GetVotes()
+        public IEnumerable<VoteListItem> GetVotes(bool isAdmin)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                //var adminRoleId = ctx.Roles.FirstOrDefault(u => u.Name.Equals("Admin")).Id;
+                //var list = ctx.Users.Where(u => u.Roles.Any(r => r.RoleId == adminRoleId)).ToList();
+
+                //var admins = ctx.Roles.FirstOrDefault(u => u.Name.Equals("Admin")).Users;
+                //bool isAdmin = admins.Where(a => a.UserId == _userId.ToString()).Count() != 0;
                 var interrogation =
                     ctx
                         .MealVotes
+                        .Where(vote => vote.ApplicationUserId == _userId || isAdmin)
                         .Select(
                         e =>
                             new VoteListItem
@@ -99,14 +105,14 @@ namespace MealRater.Services
             }
         }
 
-        public bool DeleteNote(int voteId)
+        public bool DeleteVote(int voteId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .MealVotes
-                        .Single(e => e.VoteId == voteId && e.ApplicationUserId == _userId);
+                        .Single(e => e.VoteId == voteId);
 
                 ctx.MealVotes.Remove(entity);
 

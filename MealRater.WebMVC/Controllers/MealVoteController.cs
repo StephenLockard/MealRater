@@ -16,8 +16,14 @@ namespace MealRater.WebMVC.Controllers
         //Get
         public ActionResult Index()
         {
+            bool isAdmin = false ;
+            if (User.IsInRole("Admin"))
+            {
+                isAdmin = true;
+            }
+            
             var service = CreateVoteService();
-            var model = service.GetVotes();
+            var model = service.GetVotes(isAdmin);
             return View(model);
         }
 
@@ -87,7 +93,7 @@ namespace MealRater.WebMVC.Controllers
         {
             var service = CreateVoteService();
 
-            service.DeleteNote(id);
+            service.DeleteVote(id);
 
             TempData["SaveResult"] = "Your note was deleted";
 
@@ -128,5 +134,7 @@ namespace MealRater.WebMVC.Controllers
             ModelState.AddModelError("", "Your vote could not be updated.");
             return View(model);
         }
+
+
     }
 }

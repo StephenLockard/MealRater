@@ -7,7 +7,10 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
 </p>
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -46,9 +49,15 @@
                 @Html.DisplayFor(modelItem => item.MealDescription)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MealID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MealID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MealID })
+                @if (User.IsInRole("Admin"))
+                {
+                    <div>
+
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MealID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MealID }) |
+                    </div>
+                }
+                @Html.ActionLink("Details", "Details", new { id = item.MealID })
             </td>
         </tr>
     }

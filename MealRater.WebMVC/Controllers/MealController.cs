@@ -20,11 +20,13 @@ namespace MealRater.WebMVC.Controllers.MealVoteControllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(MealCreate model)
