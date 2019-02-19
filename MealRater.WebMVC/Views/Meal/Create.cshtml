@@ -4,15 +4,15 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create a Dish</h2>
+<h2 class=" text-primary">Create a Dish</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Fill in details about the dish.</h4>
+    <div class="form-horizontal text-primary">
+       
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -33,7 +33,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-outline-primary" />
             </div>
         </div>
     </div>

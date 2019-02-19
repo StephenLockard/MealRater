@@ -1,27 +1,27 @@
 ﻿@model IEnumerable<MealRater.Models.VoteListItem>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Votes";
 }
 
-<h2>Index</h2>
+<h2>Votes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-outline-primary" })
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.VoteID)
+            Vote #
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MealID)
+            Menu #
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MealName)
+            Menu Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MealScore)
+            Score 1-10
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -29,29 +29,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.VoteID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MealID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MealName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MealScore)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.VoteID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.VoteID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.VoteID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.VoteID }, new { @class = "btn btn-outline-primary" }) 
+                @Html.ActionLink("Details", "Details", new { id = item.VoteID }, new { @class = "btn btn-outline-primary" }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.VoteID }, new { @class = "btn btn-outline-primary" })
+            </td>
+        </tr>
+    }
 
 </table>

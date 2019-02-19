@@ -1,17 +1,53 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h1 class="text-primary">Stephen C Lockard II</h1>
+<h3></h3>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
+    Junior Developer<br />
+    Carmel, Indiana<br />
+    <span class="text-warning">(317) 313-0279</span><br />
+    <a href="mailto:Marketing@example.com" class="text-danger">Stephen.Lockard.2@Gmail.com</a>
 </address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="container" , id="Contact">
+    <section id="contact">
+        <h2 class="text-primary">Contact Me</h2>
+        <div class="row">
+            <div class="col-12 text-primary">
+                <form action="https://formspree.io/stephen.lockard.2@gmail.com" method="POST">
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Your Name" id="name" required
+                                   data-validation-required-message="Please enter your name" name="name">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="Your Email" id="email" required
+                                   data-validation-required-message="Please enter your email" name="_replyto">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="7" placeholder="Your Message" id="message" required
+                                      data-validation-required-message="Please leave a message" name="message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-outline-primary">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
