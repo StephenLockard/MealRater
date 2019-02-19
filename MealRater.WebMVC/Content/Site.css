@@ -26,3 +26,17 @@ textarea {
 .padded-link{
     margin: 20px;
 }
+
+#CarouselOne{
+    min-height: 30em;
+}
+
+#CarouselTwo {
+    min-height: 30em;
+}
+
+.carousel-caption {
+    max-width: 100%;
+    background: rgba(0, 0, 0, .25);
+    text-align: center;
+}
