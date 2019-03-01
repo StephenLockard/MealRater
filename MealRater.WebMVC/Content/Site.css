@@ -27,19 +27,23 @@ textarea {
     margin: 20px;
 }
 
-#CarouselOne{
+/*#CarouselOne{
     min-height: 30em;
 }
 
 #CarouselTwo {
     min-height: 30em;
-}
+}*/
 
 .carousel-caption {
     max-width: 100%;
-    background: rgba(0, 0, 0, .25);
+    background: rgba(0, 0, 0, .35);
     text-align: center;
 }
 .color-white a{
     color:whitesmoke;
+}
+
+.btn{
+    margin-top: 15px;
 }

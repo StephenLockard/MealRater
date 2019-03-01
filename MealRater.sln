@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealRater.Contracts", "Meal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealRater.Services", "MealRater.Services\MealRater.Services.csproj", "{24DB5A4F-B180-46C3-B17A-592FD18B5110}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealraterWebAPI", "MealraterWebAPI\MealraterWebAPI.csproj", "{9D06894E-932F-429F-9B47-8E8591E5B62C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{24DB5A4F-B180-46C3-B17A-592FD18B5110}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24DB5A4F-B180-46C3-B17A-592FD18B5110}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24DB5A4F-B180-46C3-B17A-592FD18B5110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D06894E-932F-429F-9B47-8E8591E5B62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D06894E-932F-429F-9B47-8E8591E5B62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D06894E-932F-429F-9B47-8E8591E5B62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D06894E-932F-429F-9B47-8E8591E5B62C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
